@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="//use.fontawesome.com/releases/v6.5.2/css/all.css">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="shortcut icon" href="../img/Torii-Shop-Logo.png" type="image/x-icon">
+    <title>Carrinho</title>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <div class="menu">
+                <button class="hamburger" onclick="openNav()"><i class="fa-solid fa-bars"></i></button>
+                <a href="../../index.html"><img src="../img/Torii-Shop-Logo.png" alt="Torii" id="logo"></a>
+                <h1>TORII STORE</h1>
+            </div>
+            <div class="links">
+                <ul>
+                    <li><a href="../pages/sobre.html" class="paginas">SOBRE</a></li>
+                    <li><a href="../pages/contato.html" class="paginas">CONTATO</a></li>
+                    <li>
+                        <a href="#" class="carrinho">
+                            <i class="fa-solid fa-cart-shopping"></i>
+                            <span class="quantidade-carrinho" id="quantidade-carrinho">0</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <div id="sidebar" class="sidebar">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <div class="logo">
+            <img src="../img/Torii-Shop-Logo.png" alt="Torii" id="logo">
+            <h1>TORII STORE</h1>
+        </div>
+        <ul class="itens-menu">
+            <li><a href="../../index.html">Home</a></li>
+            <li><a href="../pages/todos.html">Todos</a></li>
+            <li><a href="../pages/miniaturas.html">Miniaturas</a></li>
+            <li><a href="../pages/camisas.html">Camisas</a></li>
+            <li><a href="../pages/acessorios.html">Acessórios</a></li>
+            <li><a href="../pages/mangas.html">Mangás</a></li>
+            <li class="mobile"><a href="../pages/sobre.html">Sobre</a></li>
+            <li class="mobile"><a href="../pages/contato.html">Contato</a></li>
+            <li class="mobile"><a href="#">Carrinho</a></li>
+        </ul>
+    </div>
+
+    <main>
+        <ul class="breadcrumbs" id="breadcrumbs">
+            <li><a href="../../index.html">Home</a></li>
+            <li>Carrinho</li>
+        </ul>
+
+        <div class="container-carrinho">
+            <div class="cart" id="cart-container">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Imagem</th>
+                            <th>Nome</th>
+                            <th>Quantidade</th>
+                            <th>Preço</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <!-- Itens do carrinho serão exibidos aqui -->
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="cart-summary">
+                <h2>VALOR TOTAL</h2>
+                <p>Valor total: <span id="total">R$0.00</span></p>
+                <button class="clear-cart-button" id="clear-cart-button">Limpar Carrinho</button>
+                <button class="checkout-button" id="checkout-button">Realizar Pagamento</button>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="informacoes">
+            <div class="logo-footer">
+                <img src="../../src/img/Torii-Shop-Logo.png" alt="Torii" id="logo">
+                <h1>TORII STORE</h1>
+            </div>
+            <div class="contato">
+                <ul>
+                    <li><a href="#"><i class="fa-brands fa-whatsapp"></i></a></li>
+                    <li><a href="#"><i class="fa-brands fa-instagram"></i></a></li>
+                    <li><a href="#"><i class="fa-brands fa-x-twitter"></i></a></li>
+                </ul>
+            </div>
+            <p>R. Irênio Greco, 4580 - Vila Imperador, Franca - SP, 14405-191</p>
+            <p>©Torii Store. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const cart = JSON.parse(localStorage.getItem('cart')) || [];
+            const cartContainer = document.getElementById('cart-container').querySelector('tbody');
+            const totalElement = document.getElementById('total');
+            let cartHTML = '';
+            let total = 0;
+
+            cart.forEach(item => {
+                const itemTotal = item.price * item.quantity;
+                total += itemTotal;
+                cartHTML += `
+            <tr>
+                <td><img src="${item.image}" alt="${item.name}"></td>
+                <td>${item.name}</td>
+                <td>${item.quantity}</td>
+                <td>R$ ${item.price.toLocaleString('pt-BR', { minimumFractionDigits: 2, maximumFractionDigits: 2 })}</td>
+            </tr>
+        `;
+            });
+
+            cartContainer.innerHTML = cartHTML;
+            totalElement.innerText = `R$ ${total.toLocaleString('pt-BR', { minimumFractionDigits: 2, maximumFractionDigits: 2 })}`;
+        });
+
+        // Função para limpar o carrinho
+        document.getElementById('clear-cart-button').addEventListener('click', () => {
+            localStorage.removeItem('cart');
+            document.getElementById('cart-container').querySelector('tbody').innerHTML = '';
+            document.getElementById('total').innerText = 'R$ 0,00';
+            atualizarQuantidadeCarrinho();
+        });
+
+        // Função para atualizar a quantidade de itens no carrinho
+        function atualizarQuantidadeCarrinho() {
+            let carrinho = JSON.parse(localStorage.getItem('cart')) || [];
+            let quantidadeCarrinho = document.querySelector('.quantidade-carrinho');
+            if (quantidadeCarrinho) {
+                quantidadeCarrinho.textContent = carrinho.length;
+            }
+        }
+
+        // Atualiza a quantidade de itens no carrinho quando a página é carregada
+        document.addEventListener('DOMContentLoaded', atualizarQuantidadeCarrinho);
+    </script>
+
+    <script src="../js/carrinho.js"></script>
+    <script src="../js/menu.js"></script>
+</body>
+
+</html>

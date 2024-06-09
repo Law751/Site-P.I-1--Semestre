@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="//use.fontawesome.com/releases/v6.5.2/css/all.css">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="shortcut icon" href="../img/Torii-Shop-Logo.png" type="image/x-icon">
+    <title>Camisas</title>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <div class="menu">
+                <button class="hamburger" onclick="openNav()"><i class="fa-solid fa-bars"></i></button>
+                <a href="../../index.html"><img src="../img/Torii-Shop-Logo.png" alt="Torii" id="logo"></a>
+                <h1>TORII STORE</h1>
+            </div>
+            <div class="links">
+                <ul>
+                    <li><a href="../pages/sobre.html" class="paginas">SOBRE</a></li>
+                    <li><a href="../pages/contato.html" class="paginas">CONTATO</a></li>
+                    <li>
+                        <a href="../pages/carrinho.html">
+                            <i class="fa-solid fa-cart-shopping"></i>
+                            <span class="quantidade-carrinho" id="quantidade-carrinho">0</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <div id="sidebar" class="sidebar">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <div class="logo">
+            <img src="../img/Torii-Shop-Logo.png" alt="Torii" id="logo">
+            <h1>TORII STORE</h1>
+        </div>
+        <ul class="itens-menu">
+            <li><a href="../../index.html">Home</a></li>
+            <li><a href="../pages/todos.html">Todos</a></li>
+            <li><a href="../pages/miniaturas.html">Miniaturas</a></li>
+            <li><a href="../pages/camisas.html">Camisas</a></li>
+            <li><a href="../pages/acessorios.html">Acessórios</a></li>
+            <li><a href="../pages/mangas.html">Mangás</a></li>
+            <li class="mobile"><a href="../pages/sobre.html">Sobre</a></li>
+            <li class="mobile"><a href="../pages/contato.html">Contato</a></li>
+            <li class="mobile"><a href="../pages/carrinho.html">Carrinho</a></li>
+        </ul>
+    </div>
+
+    <main>
+        <ul class="breadcrumbs" id="breadcrumbs">
+            <li><a href="../../index.html">Home</a></li>
+            <li>Camisas</li>
+        </ul>
+
+        <div class="todos">
+            <h1>CAMISAS</h1>
+            <div class="carrossel">
+                <div class="slides">
+                    <div class="slide">
+                        <img id="imageSlide" alt="Imagens do carrossel">
+                    </div>
+                    <div class="indicadores"></div>
+                    <div class="setas-navegacao">
+                        <div class="seta anterior"><i class="fa-solid fa-caret-left"></i></div>
+                        <div class="seta proximo"><i class="fa-solid fa-caret-right"></i></div>
+                    </div>
+                </div>
+            </div>
+            <div class="produtos" style="margin-bottom: 70px;">
+                <div class="produto">
+                    <a href="#">
+                        <img src="https://t3.ftcdn.net/jpg/02/68/55/60/360_F_268556012_c1WBaKFN5rjRxR2eyV33znK4qnYeKZjm.jpg"
+                            alt="Imagem do produto" class="imagem-produto">
+                        <p class="nome">Nome do produto</p>
+                        <p class="valor">Valor</p>
+                    </a>
+                </div>
+                <div class="produto">
+                    <a href="#">
+                        <img src="https://t3.ftcdn.net/jpg/02/68/55/60/360_F_268556012_c1WBaKFN5rjRxR2eyV33znK4qnYeKZjm.jpg"
+                            alt="Imagem do produto" class="imagem-produto">
+                        <p class="nome">Nome do produto</p>
+                        <p class="valor">Valor</p>
+                    </a>
+                </div>
+                <div class="produto">
+                    <a href="#">
+                        <img src="https://t3.ftcdn.net/jpg/02/68/55/60/360_F_268556012_c1WBaKFN5rjRxR2eyV33znK4qnYeKZjm.jpg"
+                            alt="Imagem do produto" class="imagem-produto">
+                        <p class="nome">Nome do produto</p>
+                        <p class="valor">Valor</p>
+                    </a>
+                </div>
+                <div class="produto">
+                    <a href="#">
+                        <img src="https://t3.ftcdn.net/jpg/02/68/55/60/360_F_268556012_c1WBaKFN5rjRxR2eyV33znK4qnYeKZjm.jpg"
+                            alt="Imagem do produto" class="imagem-produto">
+                        <p class="nome">Nome do produto</p>
+                        <p class="valor">Valor</p>
+                    </a>
+                </div>
+            </div>
+    </main>
+
+    <footer>
+        <div class="informacoes">
+            <div class="logo-footer">
+                <img src="../../src/img/Torii-Shop-Logo.png" alt="Torii" id="logo">
+                <h1>TORII STORE</h1>
+            </div>
+            <div class="contato">
+                <ul>
+                    <li><a href="#"><i class="fa-brands fa-whatsapp"></i></a></li>
+                    <li><a href="#"><i class="fa-brands fa-instagram"></i></a></li>
+                    <li><a href="#"><i class="fa-brands fa-x-twitter"></i></a></li>
+                </ul>
+            </div>
+            <p>R. Irênio Greco, 4580 - Vila Imperador, Franca - SP, 14405-191</p>
+            <p>©Torii Store. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+
+    <script src="../js/carrinho.js"></script>
+    <script src="../js/menu.js"></script>
+    <script src="../js/carrosselcami.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="//use.fontawesome.com/releases/v6.5.2/css/all.css">
+    <link rel="stylesheet" href="../../css/style.css">
+    <link rel="shortcut icon" href="../../img/Torii-Shop-Logo.png" type="image/x-icon">
+    <title>Produto</title>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <div class="menu">
+                <button class="hamburger" onclick="openNav()"><i class="fa-solid fa-bars"></i></button>
+                <a href="../../../index.html"><img src="../../img/Torii-Shop-Logo.png" alt="Torii" id="logo"></a>
+                <h1>TORII STORE</h1>
+            </div>
+            <div class="links">
+                <ul>
+                    <li><a href="../../pages/sobre.html" class="paginas">SOBRE</a></li>
+                    <li><a href="../../pages/contato.html" class="paginas">CONTATO</a></li>
+                    <li>
+                        <a href="../../pages/carrinho.html">
+                            <i class="fa-solid fa-cart-shopping"></i>
+                            <span class="quantidade-carrinho" id="quantidade-carrinho">0</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <div id="sidebar" class="sidebar">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <div class="logo">
+            <img src="../../img/Torii-Shop-Logo.png" alt="Torii" id="logo">
+            <h1>TORII STORE</h1>
+        </div>
+        <ul class="itens-menu">
+            <li><a href="../../../index.html">Home</a></li>
+            <li><a href="../../pages/todos.html">Todos</a></li>
+            <li><a href="../../pages/miniaturas.html">Miniaturas</a></li>
+            <li><a href="../../pages/camisas.html">Camisas</a></li>
+            <li><a href="../../pages/acessorios.html">Acessórios</a></li>
+            <li><a href="../../pages/mangas.html">Mangás</a></li>
+            <li class="mobile"><a href="../../pages/sobre.html">Sobre</a></li>
+            <li class="mobile"><a href="../../pages/contato.html">Contato</a></li>
+            <li class="mobile"><a href="../../pages/carrinho.html">Carrinho</a></li>
+        </ul>
+    </div>
+
+    <main>
+        <ul class="breadcrumbs" id="breadcrumbs">
+            <li><a href="../../../index.html">Home</a></li>
+            <li><a href="../../pages/miniaturas.html">Miniaturas</a></li>
+            <li>Produto1</li>
+        </ul>
+
+        <div class="container-produto">
+            <div class="detalhes-produto">
+                <div class="product-images">
+                    <div class="thumbnail-images">
+                        <img src="https://t3.ftcdn.net/jpg/02/68/55/60/360_F_268556012_c1WBaKFN5rjRxR2eyV33znK4qnYeKZjm.jpg"
+                            alt="Imagem 1"
+                            onclick="changeImage('https://t3.ftcdn.net/jpg/02/68/55/60/360_F_268556012_c1WBaKFN5rjRxR2eyV33znK4qnYeKZjm.jpg')">
+                        <img src="https://t3.ftcdn.net/jpg/02/68/55/60/360_F_268556012_c1WBaKFN5rjRxR2eyV33znK4qnYeKZjm.jpg"
+                            alt="Imagem 2"
+                            onclick="changeImage('https://t3.ftcdn.net/jpg/02/68/55/60/360_F_268556012_c1WBaKFN5rjRxR2eyV33znK4qnYeKZjm.jpg')">
+                        <img src="https://t3.ftcdn.net/jpg/02/68/55/60/360_F_268556012_c1WBaKFN5rjRxR2eyV33znK4qnYeKZjm.jpg"
+                            alt="Imagem 3"
+                            onclick="changeImage('https://t3.ftcdn.net/jpg/02/68/55/60/360_F_268556012_c1WBaKFN5rjRxR2eyV33znK4qnYeKZjm.jpg')">
+                        <img src="https://t3.ftcdn.net/jpg/02/68/55/60/360_F_268556012_c1WBaKFN5rjRxR2eyV33znK4qnYeKZjm.jpg"
+                            alt="Imagem 4"
+                            onclick="changeImage('https://t3.ftcdn.net/jpg/02/68/55/60/360_F_268556012_c1WBaKFN5rjRxR2eyV33znK4qnYeKZjm.jpg')">
+                    </div>
+                    <div class="main-image">
+                        <img id="main-image"
+                            src="https://t3.ftcdn.net/jpg/02/68/55/60/360_F_268556012_c1WBaKFN5rjRxR2eyV33znK4qnYeKZjm.jpg"
+                            alt="Nome do Produto">
+                    </div>
+                </div>
+                <div class="product-details">
+                    <h1>Nome do Produto</h1>
+                    <p>Descrição detalhada do produto. Inclua todas as informações relevantes, como materiais,
+                        dimensões, personagens representados e quaisquer outros detalhes importantes que o comprador
+                        deva saber.</p>
+                    <p class="product-price">R$99,90</p>
+                    <div class="quantity">
+                        <label for="quantity">Quantidade:</label>
+                        <input type="number" id="quantity" name="quantity" value="1" min="1">
+                    </div>
+                    <button class="buy-button" id="buy-button">Comprar Agora</button>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="informacoes">
+            <div class="logo-footer">
+                <img src="../../img/Torii-Shop-Logo.png" alt="Torii" id="logo">
+                <h1>TORII STORE</h1>
+            </div>
+            <div class="contato">
+                <ul>
+                    <li><a href="#"><i class="fa-brands fa-whatsapp"></i></a></li>
+                    <li><a href="#"><i class="fa-brands fa-instagram"></i></a></li>
+                    <li><a href="#"><i class="fa-brands fa-x-twitter"></i></a></li>
+                </ul>
+            </div>
+            <p>R. Irênio Greco, 4580 - Vila Imperador, Franca - SP, 14405-191</p>
+            <p>©Torii Store. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+    <script src="../../js/carrinho.js"></script>
+    <script src="../../js/menu.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="//use.fontawesome.com/releases/v6.5.2/css/all.css">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="shortcut icon" href="../img/Torii-Shop-Logo.png" type="image/x-icon">
+    <title>Contato</title>
+    <style>
+        p {
+            text-align: center;
+        }
+
+        ul {
+            text-align: center;
+            list-style: none;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <div class="menu">
+                <button class="hamburger" onclick="openNav()"><i class="fa-solid fa-bars"></i></button>
+                <a href="../../index.html"><img src="../img/Torii-Shop-Logo.png" alt="Torii" id="logo"></a>
+                <h1>TORII STORE</h1>
+            </div>
+            <div class="links">
+                <ul>
+                    <li><a href="../pages/sobre.html" class="paginas">SOBRE</a></li>
+                    <li><a href="../pages/contato.html" class="paginas">CONTATO</a></li>
+                    <li>
+                        <a href="../pages/carrinho.html">
+                            <i class="fa-solid fa-cart-shopping"></i>
+                            <span class="quantidade-carrinho" id="quantidade-carrinho">0</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <div id="sidebar" class="sidebar">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <div class="logo">
+            <img src="../img/Torii-Shop-Logo.png" alt="Torii" id="logo">
+            <h1>TORII STORE</h1>
+        </div>
+        <ul class="itens-menu">
+            <li><a href="../../index.html">Home</a></li>
+            <li><a href="../pages/todos.html">Todos</a></li>
+            <li><a href="../pages/miniaturas.html">Miniaturas</a></li>
+            <li><a href="../pages/camisas.html">Camisas</a></li>
+            <li><a href="../pages/acessorios.html">Acessórios</a></li>
+            <li><a href="../pages/mangas.html">Mangás</a></li>
+            <li class="mobile"><a href="../pages/sobre.html">Sobre</a></li>
+            <li class="mobile"><a href="../pages/contato.html">Contato</a></li>
+            <li class="mobile"><a href="../pages/carrinho.html">Carrinho</a></li>
+        </ul>
+    </div>
+
+    <main>
+        <ul class="breadcrumbs" id="breadcrumbs">
+            <li><a href="../../index.html">Home</a></li>
+            <li>Contato</li>
+        </ul>
+
+        <div class="conteudo">
+            <h2>FALE CONOSCO</h2>
+            <p><strong>Telefone:</strong> (XX) XXXX-XXXX</p>
+            <p><strong>Email:</strong> <a href="mailto:contato@toriistore.com">contato@toriistore.com</a></p>
+            <h2>ENDEREÇO</h2>
+            <p>R. Irênio Greco, 4580<br>
+                Vila Imperador, Franca - SP, CEP 14405-191</p>
+            <h2>HORÁRIO DE FUNCIONAMENTO</h2>
+            <p><strong>Loja Física:</strong></p>
+            <ul>
+                <li>Segunda a Sexta: 10h - 20h</li>
+                <li>Sábado: 10h - 18h</li>
+                <li>Domingo: 12h - 16h</li>
+            </ul>
+            <p><strong>Atendimento Online:</strong></p>
+            <ul>
+                <li>Segunda a Sexta: 9h - 18h</li>
+            </ul>
+        </div>
+    </main>
+
+    <footer>
+        <div class="informacoes">
+            <div class="logo-footer">
+                <img src="../../src/img/Torii-Shop-Logo.png" alt="Torii" id="logo">
+                <h1>TORII STORE</h1>
+            </div>
+            <div class="contato">
+                <ul>
+                    <li><a href="#"><i class="fa-brands fa-whatsapp"></i></a></li>
+                    <li><a href="#"><i class="fa-brands fa-instagram"></i></a></li>
+                    <li><a href="#"><i class="fa-brands fa-x-twitter"></i></a></li>
+                </ul>
+            </div>
+            <p>R. Irênio Greco, 4580 - Vila Imperador, Franca - SP, 14405-191</p>
+            <p>©Torii Store. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+
+    <script src="../js/carrinho.js"></script>
+    <script src="../js/menu.js"></script>
+</body>
+
+</html>
