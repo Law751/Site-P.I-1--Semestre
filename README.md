@@ -1,4 +1,4 @@
-<h1>⛩️👺Torii Store ⛩️👺</h1>
+<h1>⛩️👺 Torii Store 👺⛩️</h1>
   
 <p>Loja online de Roupas Miniaturas e muito mais</p>
 <h1>Objetivos 🌐</h1>
