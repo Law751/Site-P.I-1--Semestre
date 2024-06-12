@@ -1,10 +1,5 @@
 <h1>⛩️👺 Torii Store 👺⛩️</h1>
 
-<h1>⚔️Link do Site⚔️
-
- https://torii-store.netlify.app 
-</h1>
-
 <p>A sua loja online de Roupas, Miniaturas e muito mais.</p>
 <h1>Objetivos 🌐</h1>
 <p>Site de demonstração para uma loja online de vendas de artigos de vestuário, brinquedos, artigos de decoração para o publico geek nerd.</p>
@@ -62,13 +57,7 @@
 
 ![image](https://github.com/Law751/Site-P.I-1--Semestre/assets/147450456/11b8d718-8072-4d40-a81b-302a2fd0aeae)
 
+<h1>⚔️Link do Site⚔️
 
-
-
-
-
-
-
-
-
-
+ https://torii-store.netlify.app 
+</h1>
