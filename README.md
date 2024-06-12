@@ -1,6 +1,6 @@
 <h1>⛩️👺 Torii Store 👺⛩️</h1>
 
-<h1>⭐Link do Site⭐
+<h1>⚔️Link do Site⚔️
 
  https://torii-store.netlify.app 
 </h1>
